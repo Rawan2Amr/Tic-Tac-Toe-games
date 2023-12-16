@@ -7,6 +7,25 @@
 #include"BoardGame_Classes.hpp"
 using namespace std;
 //--------------------------------
+void Game0(){
+    int choice;
+    Player* players[2];
+    players[0] = new Player (1, 'x');
+
+    cout << "Welcome to FCAI X-O Game. :)\n";
+    cout << "Press 1 if you want to play with computer: ";
+    cin >> choice;
+    if (choice != 1)
+        players[1] = new Player (2, 'o');
+    else
+        //Player pointer points to child
+        players[1] = new RandomPlayer ('o', 3);
+
+    GameManager x_o_game (new X_O_Board(), players);
+    x_o_game.run();
+    system ("pause");
+}
+//--------------------------------
 void Game1(){
     int choice;
     Player* players[2];
@@ -64,11 +83,15 @@ void Game3(){
 //------------------------------
 int main() {
     cout << "Welcome to FCAI Games. :)\n";
-    cout << "Enter (1) for game1 "<<'\n'
+    cout << "Enter (0) for game0 "<<'\n'
+         << "Enter (1) for game1 "<<'\n'
          << "Enter (2) for game2 "<<'\n'
          << "Enter (3) for game3" <<'\n';
     char option ;
     cin >> option;
+    if (option=='0') {
+        Game0();
+    }
     if (option=='1'){
          Game1();
     }
