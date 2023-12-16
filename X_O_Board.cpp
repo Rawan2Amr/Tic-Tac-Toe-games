@@ -6,7 +6,7 @@
 #include <random>
 #include <iomanip>
 #include <algorithm>
-#include "../include/BoardGame_Classes.hpp"
+#include "BoardGame_Classes.hpp"
 using namespace std;
 
 // Set the board
