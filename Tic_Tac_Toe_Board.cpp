@@ -1,6 +1,9 @@
-//
-// Created by PC on 12/15/2023.
-//
+// File name:Tic_Tac_Toe_Board.cpp
+// Purpose: Tic Tac Toe game
+// Author(s): Yomna Maged
+// ID(s): Yomna Maged 20221196
+// Section: S19
+
 #include <iostream>
 #include <random>
 #include <iomanip>
@@ -45,7 +48,7 @@ void Tic_Tac_Toe::display_board(){
 //--------------------------------------------------
 bool Tic_Tac_Toe::is_winner(){
     if(n_moves != 24) return false;
-
+// counter for X and O
     int n_of_X = 0;
     int n_of_O = 0;
 
@@ -54,18 +57,19 @@ bool Tic_Tac_Toe::is_winner(){
             char symbol = board[i][j];
 
             if (symbol == 'X' || symbol == 'O') {
+//                check vertical
                 if (j + 2 < 5 && symbol == board[i][j + 1] && symbol == board[i][j + 2]) {
                     (symbol == 'X') ? ++n_of_X : ++n_of_O;
                 }
-
+//                check horizontal
                 if (i + 2 < 5 && symbol == board[i + 1][j] && symbol == board[i + 2][j]) {
                     (symbol == 'X') ? ++n_of_X : ++n_of_O;
                 }
-
+//                check right diagonal
                 if (i + 2 < 5 && j + 2 < 5 && symbol == board[i + 1][j + 1] && symbol == board[i + 2][j + 2]) {
                     (symbol == 'X') ? ++n_of_X : ++n_of_O;
                 }
-
+//                check left diagonal
                 if (i + 2 < 5 && j - 2 >= 0 && symbol == board[i + 1][j - 1] && symbol == board[i + 2][j - 2]) {
                     (symbol == 'X') ? ++n_of_X : ++n_of_O;
                 }
@@ -73,6 +77,7 @@ bool Tic_Tac_Toe::is_winner(){
         }
     }
 
+//    display the winner
     if(n_of_X > n_of_O){
         cout << player[0]->to_string() << " wins" << endl;
     }

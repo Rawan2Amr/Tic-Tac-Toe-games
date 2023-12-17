@@ -1,6 +1,9 @@
-//
-// Created by PC on 12/17/2023.
-//
+// File name: Connect_four_player.cpp
+// Purpose: a class for connect for game
+// Author(s): Rawan Amr
+// ID(s): Rawan Amr 20221062
+// Section: S19
+
 #include<iostream>
 #include<random>
 #include<iomanip>

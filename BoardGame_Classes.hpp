@@ -1,7 +1,4 @@
-// Class definition for XO game classes
-// Author:  Mohammad El-Ramly
-// Date:    10/10/2022
-// Version: 1
+
 #ifndef _BoardGame_CLASSES_H
 #define _BoardGame_CLASSES_H
 using namespace std;
@@ -78,13 +75,7 @@ class Player {
        virtual char get_symbol();
 };
 //-------------------------------------------
-class connect_four_player : public Player {
 
-public:
-    void get_move(int& x,int& y);
-    char get_symbol();
-    connect_four_player(int order ,char symbol);
-};
 ///////////////////////////////////////////
 // This class represents a random computer player
 // that generates random positions x y (0 to 2)
@@ -118,6 +109,14 @@ class GameManager {
 
 };
 //------------------------------------------------
+class connect_four_player : public Player {
+
+public:
+    void get_move(int& x,int& y);
+    char get_symbol();
+    connect_four_player(int order ,char symbol);
+};
+
 class Tic_Tac_Toe: public Board {
 private:
     Player *player[2];
@@ -129,6 +128,7 @@ public:
     bool is_draw();
     bool game_is_over();
 };
+
 //--------------------------------------------
 // This class represents a Pyramic Tic-Tac-Toe
 // used in X_O game

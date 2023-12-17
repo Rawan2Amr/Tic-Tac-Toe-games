@@ -1,7 +1,12 @@
-// Class definition for XO_App class
-// Author:  Mohammad El-Ramly
-// Date:    10/10/2022
-// Version: 1
+// File name:A3_Task2_S19_20221062_20221041_20221196.cpp
+// Purpose: a menu for all games
+// Author(s): Yomna Maged
+//            Rawan Amr
+//            Tasneem Mamdouh
+// ID(s): Yomna Maged     20221196
+//        Rawan Amr       20221062
+//        Tasneem Mamdouh 20221041
+// Section: S19
 
 #include <iostream>
 #include"BoardGame_Classes.hpp"

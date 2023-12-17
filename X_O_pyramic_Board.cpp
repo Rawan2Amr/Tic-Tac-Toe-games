@@ -1,5 +1,8 @@
-// Class definition for X_O_pyramic_Board_ class
-// Created by _tasneem_ on 12/14/2023.
+// File name:X_O_pyramic_Board.cpp
+// Purpose: X O pyramic game
+// Author(s): Tasneem Mamdouh
+// ID(s): Tasneem Mamdouh 20221041
+// Section: S19
 
 #include <iostream>
 #include <random>
