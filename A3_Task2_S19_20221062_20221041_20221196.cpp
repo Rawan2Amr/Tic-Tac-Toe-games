@@ -31,7 +31,7 @@ void Game1(){
     Player* players[2];
     players[0] = new Player (1, 'x');
 
-    cout << "Welcome to FCAI X-O Game. :)\n";
+    cout << "Welcome to FCAI X_O pyramic Game. :)\n";
     cout << "Press 1 if you want to play with computer: ";
     cin >> choice;
     if (choice != 1)
@@ -48,17 +48,19 @@ void Game1(){
 void Game2(){
     int choice;
     Player* players[2];
-    players[0] = new conect (1, 'x');
+    //Player pointer points to child
+    players[0] = new connect_four_player (1, 'x');
 
     cout << "Press 1 if you want to play with computer and 0 to play with another: ";
     cin >> choice;
     if (choice != 1)
-        players[1] = new conect (2, 'o');
+        //Player pointer points to child
+        players[1] = new connect_four_player (2, 'o');
     else
         //Player pointer points to child
         players[1] = new RandomPlayer ('o', 7);
 
-    GameManager x_o_game (new Conect_four_Board(), players);
+    GameManager x_o_game (new Connect_four_Board(), players);
     x_o_game.run();
     system ("pause");
 }
@@ -83,10 +85,10 @@ void Game3(){
 //------------------------------
 int main() {
     cout << "Welcome to FCAI Games. :)\n";
-    cout << "Enter (0) for game0 "<<'\n'
-         << "Enter (1) for game1 "<<'\n'
-         << "Enter (2) for game2 "<<'\n'
-         << "Enter (3) for game3" <<'\n';
+    cout << "Enter (0) for X_O game "<<'\n'
+         << "Enter (1) for pyramic game "<<'\n'
+         << "Enter (2) for four in a row game "<<'\n'
+         << "Enter (3) for Tic Tac Toe game" <<'\n';
     char option ;
     cin >> option;
     if (option=='0') {

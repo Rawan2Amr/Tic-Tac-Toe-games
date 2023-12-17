@@ -10,7 +10,7 @@
 using namespace std;
 
 // Set the board
-Conect_four_Board::Conect_four_Board() {
+Connect_four_Board::Connect_four_Board() {
    n_rows =6;
    n_cols = 7;
    board = new char*[n_rows];
@@ -24,7 +24,7 @@ Conect_four_Board::Conect_four_Board() {
 // Return true  if move is valid and put it on board
 // within board boundaries in empty cell
 // Return false otherwise
-bool Conect_four_Board::update_board (int x ,int y, char mark){
+bool Connect_four_Board::update_board (int x ,int y, char mark){
    // Only update if move is valid
    for ( x = 5 ; x>=0;x--){
    if (!( y < 0 || y > 7) && (board[x][y] == 0)) {
@@ -37,7 +37,7 @@ bool Conect_four_Board::update_board (int x ,int y, char mark){
 }
 
 // Display the board and the pieces on it
-void Conect_four_Board::display_board() {
+void Connect_four_Board::display_board() {
    for (int i: {0,1,2,3,4,5}) {
       cout << "\n| ";
       for (int j: {0,1,2,3,4,5,6}) {
@@ -50,8 +50,8 @@ void Conect_four_Board::display_board() {
 
 // Returns true if there is any winner
 // either X or O
-// Written in a complex way. DO NOT DO LIKE THIS.
-bool Conect_four_Board::is_winner() {
+
+bool Connect_four_Board::is_winner() {
 //    char row_win[4], col_win[4], diag_win[4];
     for (int i = 5;i>=0;i--){
         for(int j = 0 ; j<4 ;j++){
@@ -80,12 +80,12 @@ bool Conect_four_Board::is_winner() {
     return false;
 }
 
-// Return true if 9 moves are done and no winner
-bool Conect_four_Board::is_draw() {
+// Return true if 42 moves are done and no winner
+bool Connect_four_Board::is_draw() {
     return (n_moves == 42 && !is_winner());
 }
 
-bool Conect_four_Board::game_is_over () {
+bool Connect_four_Board::game_is_over () {
     return n_moves >= 42;
 }
 

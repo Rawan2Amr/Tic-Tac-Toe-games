@@ -26,7 +26,6 @@ Player::Player (int order, char symbol) {
     this->symbol = symbol;
 }
 
-// Get desired move: x y (each between 0 and 2)
 // Virtual (can change for other player types)
 void Player::get_move ( int& x,int& y) {
     cout << "\nPlease enter your move : ";
@@ -43,22 +42,7 @@ char Player::get_symbol() {
     return symbol;
 }
 //-------------------------------
-void conect ::get_move(int& x,int &y) {
-    cout << "\nPlease enter your move : ";
-    cin>> y;
-}
-//---------------------------
-conect ::conect(int order, char symbol) {
-    cout << "Welcome player " << order << endl;
-    cout << "Please enter your name: ";
-    cin >> name;
-    this->symbol = symbol;
-}
-//------------------------------------
+
 Player ::Player() {
     name == "player1";
-}
-//-----------------------------------------
-char conect::get_symbol() {
-    return symbol;
 }

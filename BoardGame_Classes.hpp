@@ -32,9 +32,9 @@ public:
 ///////////////////////////////////////////
 // This class represents a 3 x 3 board
 // used in X_O game
-class Conect_four_Board:public Board {
+class Connect_four_Board:public Board {
 public:
-  Conect_four_Board();
+  Connect_four_Board();
    bool update_board (int x ,int y, char mark);
    void display_board();
    bool is_winner();
@@ -78,14 +78,12 @@ class Player {
        virtual char get_symbol();
 };
 //-------------------------------------------
-class conect : public Player {
-//protected:
-//    string name;
-//    char symbol;
+class connect_four_player : public Player {
+
 public:
     void get_move(int& x,int& y);
     char get_symbol();
-    conect(int order ,char symbol);
+    connect_four_player(int order ,char symbol);
 };
 ///////////////////////////////////////////
 // This class represents a random computer player
