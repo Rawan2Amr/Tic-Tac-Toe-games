@@ -1,7 +1,7 @@
 // File name:X_O_pyramic_Board.cpp
 // Purpose: X O pyramic game
 // Author(s): Tasneem Mamdouh
-// ID(s): Tasneem Mamdouh 20221041
+// ID(s): 20221041
 // Section: S19
 
 #include <iostream>
