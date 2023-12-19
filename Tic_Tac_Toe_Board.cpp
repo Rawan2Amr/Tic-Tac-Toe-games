@@ -1,7 +1,7 @@
 // File name:Tic_Tac_Toe_Board.cpp
 // Purpose: Tic Tac Toe game
 // Author(s): Yomna Maged
-// ID(s): Yomna Maged 20221196
+// ID(s): 20221196
 // Section: S19
 
 #include <iostream>
